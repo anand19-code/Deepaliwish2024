@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="Canvas"></canvas>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepavali Wishes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 2s ease-in forwards;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #FFD700;
+            margin: 0;
+            animation: textGlow 2s ease-in-out 3;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #FF8C00;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #FFD700;
+        }
+
+        /* Diyas */
+        .diya {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background: orange;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            animation: flicker 1.5s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        /* Firework Animation */
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 10px #FFD700; }
+            100% { text-shadow: 0 0 20px #FFD700; }
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes burst {
+            0% { transform: scale(0.5); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 1; }
+            100% { transform: scale(0); opacity: 0; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Shubh Deepavali</h1>
+        <p>Let's celebrate the festival in the true sense by spreading joy and light.<br>
+        Have a Happy, Dhamakedar and blessed Deepavali! :)</p>
+        <div class="footer">by: Anand Shankar</div>
+        <div class="diya"></div>
+    </div>
+
+    <!-- Firework Animation Elements -->
+    <div class="firework" style="background-color: red; top: 20%; left: 30%; animation: burst 1s ease-in forwards; animation-delay: 0s;"></div>
+    <div class="firework" style="background-color: blue; top: 30%; left: 50%; animation: burst 1s ease-in forwards; animation-delay: 0.3s;"></div>
+    <div class="firework" style="background-color: green; top: 40%; left: 70%; animation: burst 1s ease-in forwards; animation-delay: 0.6s;"></div>
+    <div class="firework" style="background-color: orange; top: 25%; left: 80%; animation: burst 1s ease-in forwards; animation-delay: 0.9s;"></div>
+    <div class="firework" style="background-color: purple; top: 50%; left: 20%; animation: burst 1s ease-in forwards; animation-delay: 1.2s;"></div>
+    
+</body>
+</html>
